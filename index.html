@@ -4,14 +4,23 @@
   <meta charset="UTF-8">
   <title>Trung Nam & Mỹ Hoa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Music -->
-<div id="music-control">🔊</div>
-<iframe id="music" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID" allow="autoplay" hidden></iframe>
+<!-- ===== MUSIC ===== -->
+<div id="music-btn">🔊</div>
+
+<iframe
+  id="music-player"
+  src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID&controls=0&mute=1"
+  allow="autoplay"
+  style="width:0;height:0;border:0;visibility:hidden">
+</iframe>
+<!-- ===== END MUSIC ===== -->
 
 <section class="hero">
   <h1>Trung Nam & Mỹ Hoa</h1>
