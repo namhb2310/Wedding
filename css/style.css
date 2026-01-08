@@ -26,3 +26,13 @@ section {
   max-width: 300px;
   margin: 10px;
 }
+
+/* ===== MUSIC BUTTON ===== */
+#music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 999;
+}
