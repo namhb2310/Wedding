@@ -12,19 +12,32 @@ setInterval(() => {
   }
 }, 1000);
 
-// ===== MUSIC =====
-const btn = document.getElementById("music-btn");
-const player = document.getElementById("music-player");
-
+// ===== YOUTUBE MUSIC =====
+let player;
 let playing = false;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    height: "0",
+    width: "0",
+    videoId: "IOe0tNoUGv8", // I Do – Đức Phúc
+    playerVars: {
+      loop: 1,
+      playlist: "IOe0tNoUGv8",
+      controls: 0
+    }
+  });
+}
+
+const btn = document.getElementById("music-btn");
 
 btn.addEventListener("click", () => {
   if (!playing) {
-    player.src += "&autoplay=1";
+    player.playVideo();
     btn.classList.remove("paused");
     btn.classList.add("playing");
   } else {
-    player.src = player.src.replace("autoplay=1", "autoplay=0");
+    player.pauseVideo();
     btn.classList.remove("playing");
     btn.classList.add("paused");
   }
