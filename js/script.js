@@ -20,7 +20,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player("yt-player", {
     height: "0",
     width: "0",
-    videoId: "JgTZvDbaTtg", // I Do – Đức Phúc
+    videoId: "JgTZvDbaTtg", // Một đời
     playerVars: {
       loop: 1,
       playlist: "JgTZvDbaTtg",
