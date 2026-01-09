@@ -36,3 +36,27 @@ section {
   cursor: pointer;
   z-index: 999;
 }
+/* ===== MUSIC BUTTON ===== */
+#music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* trạng thái */
+#music-btn.playing {
+  animation: spin 2.5s linear infinite;
+}
+
+#music-btn.paused {
+  opacity: 0.6;
+}
+
+/* animation xoay */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
