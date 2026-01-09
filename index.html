@@ -10,17 +10,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  
 <!-- Music button -->
 <div id="music-btn" class="paused">🎵</div>
 
-<!-- Hidden YouTube audio -->
-<iframe
-  id="music-player"
-  src="https://www.youtube.com/embed/IOe0tNoUGv8?loop=1&playlist=IOe0tNoUGv8&controls=0"
-  allow="autoplay"
-  style="width:0;height:0;border:0;visibility:hidden">
-</iframe>
+<!-- YouTube Player -->
+<div id="yt-player" style="width:0;height:0;overflow:hidden;"></div>
+
+<!-- YouTube IFrame API -->
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <section class="hero">
   <h1>Trung Nam & Mỹ Hoa</h1>
