@@ -12,19 +12,21 @@ setInterval(() => {
   }
 }, 1000);
 
-// ===== MUSIC TOGGLE =====
+// ===== MUSIC =====
 const btn = document.getElementById("music-btn");
 const player = document.getElementById("music-player");
 
-let isPlaying = false;
+let playing = false;
 
 btn.addEventListener("click", () => {
-  if (!isPlaying) {
-    player.src = player.src.replace("&mute=1", "&mute=0");
-    btn.textContent = "🔈";
+  if (!playing) {
+    player.src += "&autoplay=1";
+    btn.classList.remove("paused");
+    btn.classList.add("playing");
   } else {
-    player.src = player.src.replace("&mute=0", "&mute=1");
-    btn.textContent = "🔊";
+    player.src = player.src.replace("autoplay=1", "autoplay=0");
+    btn.classList.remove("playing");
+    btn.classList.add("paused");
   }
-  isPlaying = !isPlaying;
+  playing = !playing;
 });
